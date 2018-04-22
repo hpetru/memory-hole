@@ -43,7 +43,6 @@
       {:http {:method POST
             :url "/api/login"
             :ajax-map {:params {:userid userid :pass pass}}
-            ; :ignore-response-body true
             :success-event [:handle-login]
             :error-event [:handle-login-error]}})))
 
