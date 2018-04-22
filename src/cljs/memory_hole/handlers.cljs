@@ -55,7 +55,7 @@
 
 (reg-event-fx
   :handle-login-error
-  (fn [_ [_ error]]
+  (fn [_ _]
     {:dispatch [:set-error "Invalid username/password."]}))
 
 (reg-event-db
