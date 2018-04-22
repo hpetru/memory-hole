@@ -41,10 +41,10 @@
     (if (or (string/blank? userid) (string/blank? pass))
       {:dispatch [:set-error "Username and password cannot be blank."]}
       {:http {:method POST
-            :url "/api/login"
-            :ajax-map {:params {:userid userid :pass pass}}
-            :success-event [:handle-login]
-            :error-event [:handle-login-error]}})))
+              :url "/api/login"
+              :ajax-map {:params {:userid userid :pass pass}}
+              :success-event [:handle-login]
+              :error-event [:handle-login-error]}})))
 
 (reg-event-fx
   :handle-login
