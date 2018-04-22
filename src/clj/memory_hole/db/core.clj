@@ -5,7 +5,7 @@
    [clojure.set :refer [difference]]
    [clojure.walk :refer [postwalk]]
    [conman.core :as conman]
-   [cuerdas.core :as string]
+   [clojure.string :as string]
    [mount.core :refer [defstate]]
    [memory-hole.config :refer [env]]
    [buddy.hashers :as hashers]

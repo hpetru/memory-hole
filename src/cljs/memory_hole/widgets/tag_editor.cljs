@@ -1,5 +1,5 @@
 (ns memory-hole.widgets.tag-editor
-  (:require [cuerdas.core :as string]
+  (:require [clojure.string :as string]
             [clojure.set :refer [difference]]
             [reagent.core :as r]
             [re-frame.core :refer [subscribe]]
@@ -25,7 +25,7 @@
 (defn- filter-selections [selections all-tags issue-tags user-input]
   (->> (difference all-tags issue-tags)
        (sort)
-       (filter #(string/includes? (string/lower %) (some-> user-input string/lower)))
+       (filter #(string/includes? (string/lower-case %) (some-> user-input string/lower-case)))
        (reset! selections)))
 
 (defn- remove-tag [tags tag]

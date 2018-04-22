@@ -1,5 +1,5 @@
 (ns memory-hole.pages.admin.groups
-  (:require [cuerdas.core :as string]
+  (:require [clojure.string :as string]
             [re-frame.core :refer [dispatch subscribe]]
             [reagent.core :as r]
             [memory-hole.bootstrap :as bs]
