@@ -48,7 +48,7 @@
 
 (reg-event-fx
   :handle-login
-  (fn [{:keys [db]} [_ user]]
+  (fn [{:keys [db]} [_ {:keys [user]}]]
     {:dispatch-n (list [:run-login-events]
                        [:set-active-page :home])
      :db (assoc db :user user)}))
